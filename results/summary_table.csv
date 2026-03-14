@@ -1,0 +1,13 @@
+section,value
+task,Intracranial haemorrhage segmentation
+modality,Non-contrast CT
+dataset_size,200 annotated 3D volumes
+data_format,.nii.gz
+train_split,100
+closed_test_split,70
+open_validation_split,30
+baseline_model,3D U-Net
+improved_workflow,3D Improved U-Net / 2D Improved U-Net
+key_preprocessing,intensity normalisation; data augmentation; resampling; forced cropping
+main_challenge,small-lesion segmentation
+best_reported_improvement,Mean Dice improved from 0.6047 to 0.6667 versus baseline 3D U-Net

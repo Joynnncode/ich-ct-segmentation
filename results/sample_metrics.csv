@@ -1,0 +1,4 @@
+model,dsc,hd,iou
+Baseline 3D U-Net,0.6047,49.9967,0.5052
+3D Improved U-Net,0.6667,41.6946,0.5686
+2D Improved U-Net,0.6804,29.3923,0.5865
