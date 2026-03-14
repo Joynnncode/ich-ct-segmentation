@@ -7,6 +7,8 @@ The project explored a deep learning workflow for lesion segmentation using a ba
 
 This repository is intended to present the workflow design, preprocessing logic, evaluation approach and representative outputs in a clear, reproducible, portfolio-friendly format.
 
+![Workflow](images/workflow_diagram.png)
+
 ## Project Background
 Intracranial haemorrhage is a life-threatening emergency condition associated with high morbidity and mortality. Non-contrast CT is commonly used for diagnosis, but manual delineation of haemorrhage regions can be difficult and time-sensitive.
 
@@ -70,6 +72,15 @@ The original dissertation compared a baseline 3D U-Net with improved workflows.
 
 The improved workflow increased mean Dice from 0.60 to 0.66 compared with the baseline 3D U-Net, demonstrating that preprocessing and workflow refinement improved segmentation quality. The project particularly focused on improving segmentation of small haemorrhage lesions.
 
+![Results summary](images/results_summary.png)
+
+## Example Visualisation
+The repository includes simplified public-facing visual materials to demonstrate workflow structure and segmentation-style outputs without exposing restricted clinical data.
+
+![CT example](images/ct_example_placeholder.png)
+
+![Segmentation example](images/segmentation_example_placeholder.png)
+
 ## Repository Structure
 - `notebooks/01_preprocessing_demo.ipynb` – demonstration of preprocessing logic
 - `notebooks/02_metrics_evaluation_demo.ipynb` – explanation of Dice, IoU and evaluation metrics
@@ -77,10 +88,16 @@ The improved workflow increased mean Dice from 0.60 to 0.66 compared with the ba
 - `src/preprocess.py` – preprocessing helper functions
 - `src/metrics.py` – segmentation metric functions
 - `src/visualisation.py` – plotting and image display helpers
-- `results/` – sample metrics tables
-- `images/` – workflow diagrams and representative figures
+- `results/sample_metrics.csv` – quantitative segmentation metrics for baseline and improved workflows
+- `results/summary_table.csv` – compact summary of dataset, workflow and key outcome
 - `docs/project_notes.md` – dataset and workflow notes
 - `docs/workflow_timeline.md` – summary of project progression
+
+## How to Use
+1. Install dependencies from `requirements.txt`
+2. Open the notebooks folder to review preprocessing, evaluation and visualisation demos
+3. Review the `results/` folder for summary metrics and workflow outputs
+4. Use the `src/` scripts as lightweight helper modules for preprocessing, metrics and plotting demonstrations
 
 ## Skills Demonstrated
 - Medical image preprocessing
@@ -93,7 +110,8 @@ The improved workflow increased mean Dice from 0.60 to 0.66 compared with the ba
 ## Limitations
 - The original clinical dataset is not included
 - This repository presents a portfolio version of the workflow rather than the full original training environment
-- The project is intended for educational and portfolio purposes only and is not a validated clinical tool
+- Example images in this repository are simplified public-facing visual materials
+- This project is intended for educational and portfolio purposes only and is not a validated clinical tool
 
 ## Future Improvements
 - Add a lightweight public demo using synthetic or open sample data
